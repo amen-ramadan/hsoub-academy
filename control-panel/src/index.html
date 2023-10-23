@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الصفحة الرئيسية</title>
+  <script type="text/html" src="{require('./index.js')}"></script>
+</head>
+
+<body>
+
+  <div class="page-container">
+    <sidebar></sidebar>
+    <div class="main-page">
+      <header class="home-intro">
+        <h2 class="welcome-tag">
+          مرحبا أحمد اتمنى انك تقضي يوما جميلاََ. <br>
+          شاهد اخر ما حدث في متجرك
+        </h2>
+        <div class="c-summary">
+          <div class="c-summary__data">
+            <span class="c-summary__value">34</span>
+            <span class="c-summary__key">اطلب</span>
+          </div>
+          <div class="c-summary__data">
+            <span class="c-summary__value">1343</span>
+            <span class="c-summary__key">زائر</span>
+          </div>
+          <div class="c-summary__data">
+            <span class="c-summary__value">$4324</span>
+            <span class="c-summary__key">مبيعات</span>
+          </div>
+        </div>
+      </header>
+      <ul class="c-actions">
+        <li class="c-action">
+          <span class="c-action__title">طلبات تحتاج المعالجة 10</span>
+          <a href="" class="c-btn c-action__link">مشاهدة الطلبات</a>
+        </li>
+        <li class="c-action">
+          <span class="c-action__title">رسائل تحتاج الأجابة 5</span>
+          <a href="" class="c-btn c-action__link">مشاهدة الرسائل</a>
+        </li>
+        <li class="c-action">
+          <span class="c-action__title">منتجات ضرورية على وشك النفاذ 3</span>
+          <a href="" class="c-btn c-action__link">مشاهدة المنتجات</a>
+        </li>
+      </ul>
+      <div class="c-card">
+        <h3 class="c-card__title">ربط معلومات الشحن</h3>
+        <a href="#" class="c-btn c-btn--primary c.card__action">ربط معومات الشحن</a>
+        <p class="c-card__desc">ان معلومات الشحن غير متوفرة . لقد سبق وقمت بإعداد موقعب يجعله يبيع أغراض فعلية. عليك
+          فعلا معلومات الشحن في متجر حتى يتاح لعكاظ معرفة كيفية توفير الشحن لزبائنك</p>
+      </div>
+      <banner></banner>
+      <chart></chart>
+      <div class="c-tabs js-tabs">
+        <div class="c-tabs__control">
+          <span class="c-tabs__tab js-tab-link is-active" data-index="orders">طلبات بحاجة لمراجعة</span>
+          <span class="c-tabs__tab js-tab-link" data-index="products">منتجات على وشك النفاذ</span>
+          <span class="c-tabs__tab js-tab-link" data-index="clients">زبائن جدد</span>
+        </div>
+        <div class="c-tabs__content">
+          <div class="c-tabs__tabarea js-tab-area is-active" data-indexed="orders">
+            <div>tab1</div>
+          </div>
+          <div class="c-tabs__tabarea js-tab-area" data-indexed="products">
+            <div>tab2</div>
+          </div>
+          <div class="c-tabs__tabarea js-tab-area" data-indexed="clients">
+            <div>tab3</div>
+          </div>
+        </div>
+      </div>
+
+      <help></help>
+    </div>
+  </div>
+
+</body>
+
+</html>

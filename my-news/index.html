@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>أخباري</title>
+</head>
+
+<body>
+  <header>
+
+    <!-- start  navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">أخباري</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">أخبار</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">تكنلوجيا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">اقتصاد</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">رياضة</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">حسوب</a>
+            </li>
+          </ul>
+          <div class="login">
+            <i class="fa-solid fa-user"></i>
+            <div class="login-container">
+              <a href="./login.html" class="button">تسجيل الدخول</a>
+            </div>
+          </div>
+          <!-- بداية الزر الذي يظهر في الشاشات المتوسطة ةالصغيرة -->
+          <div class="login-button">
+            <a href="./login.html" class="button">تسجيل الدخول</a>
+          </div>
+          <!-- نهاية الزر الذي يظهر في الشاشات المتوسطة الصغيرة -->
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <a href="./search.html" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- end  navbar -->
+
+    <!-- start-section-header-news -->
+    <div class="header-news">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <!-- start carousel -->
+            <div class="carousel-news">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">1</button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2">2</button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3">3</button>
+                </div>
+                <div class="carousel-inner" id="carousel-inner">
+                </div>
+              </div>
+            </div>
+            <!-- end carousel -->
+          </div>
+
+          <div class="col-lg-5">
+            <!-- start header-articles -->
+            <div class="header-articles" id="header-articles">
+            </div>
+            <!-- end header-articles -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end-section-header-news -->
+  </header>
+
+  <main>
+    <section class="news">
+      <div class="container">
+        <h2 class="section-title">
+          الأخبار
+        </h2>
+        <div class="row" id="news">
+        </div>
+        <div class="text-center mt-5">
+          <a href="#" class="btn button">المزيد</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="most-read">
+      <div class="container">
+        <h2 class="section-title">
+          الأكثر قراءة
+        </h2>
+        <div id="most-read">
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="opinions">
+      <div class="container">
+        <h2 class="section-title">
+          مقالات الرأي
+        </h2>
+        <div class="row" id="opinions">
+        </div>
+      </div>
+    </section>
+
+    <section class="videos">
+      <div class="container">
+        <h2 class="section-title">
+          فيديو
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="article.html" class="article-link">
+              <div class="slide-img">
+                <img src="./images/picture-13.jpg" alt="...">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="slide-text">
+                <h5 class="article-title">
+                  عنوان المقالة سيكون هنا
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="article.html" class="article-link">
+              <div class="slide-img">
+                <img src="./images/picture-12.jpg" alt="...">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="slide-text">
+                <h5 class="article-title">
+                  عنوان المقالة سيكون هنا
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="article.html" class="article-link">
+              <div class="slide-img">
+                <img src="./images/picture-14.jpg" alt="...">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="slide-text">
+                <h5 class="article-title">
+                  عنوان المقالة سيكون هنا
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="article.html" class="article-link">
+              <div class="slide-img">
+                <img src="./images/picture-15.jpg" alt="...">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="slide-text">
+                <h5 class="article-title">
+                  عنوان المقالة سيكون هنا
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="article.html" class="article-link">
+              <div class="slide-img">
+                <img src="./images/picture-16.jpg" alt="...">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="slide-text">
+                <h5 class="article-title">
+                  عنوان المقالة سيكون هنا
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="article.html" class="article-link">
+              <div class="slide-img">
+                <img src="./images/picture-17.jpg" alt="...">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="slide-text">
+                <h5 class="article-title">
+                  عنوان المقالة سيكون هنا
+                </h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="latest-news">
+      <div class="container">
+        <h2 class="section-title">
+          أحدث الأخبار
+        </h2>
+        <div class="row">
+          <div class="col-md-6" id="firstArticle">
+
+
+          </div>
+          <div class="col-md-6">
+
+            <div id="latestNewsSide">
+
+            </div>
+
+            <div class="row mt-4" id="latestNewsBottom">
+
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="#" class="btn button">المزيد</a>
+        </div>
+        <hr class="mt-5">
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <h4 class="footer-title">
+            من نحن
+          </h4>
+          <ul class="list-unstyled">
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">من نحن</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">سياسة الخصوصية</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">الأحكام والشروط</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">عن المنصة</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h4 class="footer-title">
+            تواصل معنا
+          </h4>
+          <ul class="list-unstyled">
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">تواصل معنا</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">تواصل معنا</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">أعلن معنا</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="link-unstyled">وظائف شاغرة</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h4 class="footer-title">
+            وسائل التواصل
+          </h4>
+          <ul class="list-unstyled">
+            <li class="mt-3">
+              <i class="fa-solid fa-location-dot"></i>
+              مكة المكرمة
+            </li>
+            <li class="mt-3">
+              <i class="fa-solid fa-phone"></i>
+              +201 5897987
+            </li>
+            <li class="mt-3">
+              <i class="fa-solid fa-envelope"></i>
+              info@news.io
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h4 class="footer-title">تابعنا على</h4>
+          <ul class="social-media">
+            <li class="social-media-icon">
+              <a href="#">
+                <img src="./images/social_media/Facebook.png" alt="Facebook">
+              </a>
+            </li>
+            <li class="social-media-icon">
+              <a href="#">
+                <img src="./images/social_media/Instagram.png" alt="Instagram">
+              </a>
+            </li>
+            <li class="social-media-icon">
+              <a href="#">
+                <img src="./images/social_media/Twitter.png" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-media-icon">
+              <a href="#">
+                <img src="./images/social_media/YouTube.png" alt="YouTube">
+              </a>
+            </li>
+          </ul>
+          <div class="text-center">
+            <a href="index.html" class="footer-brand">أخباري</a>
+          </div>
+          <div class="copy-right text-center mt-3">
+            جميع الحقوق محفوظة @ <span id="year"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <slider-component text="هلا هلا هلا"></slider-component> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+    integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+    integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/ar-dz.min.js"
+    integrity="sha512-kYlOGJBKmRZCjvWfRMPDKUBEStryFWxk0EHKTreqW7lN4eIxXGPV3dMFd2SIfCRuoz/6inFwEgimBGWvkHpGuA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="js/indexPage/config.js"></script>
+  <script src="js/indexPage/sliderComponent.js"></script>
+  <script src="js/indexPage/sideArticle.js"></script>
+  <script src="js/indexPage/articleComponent.js"></script>
+  <script src="js/indexPage/mostreadCard.js"></script>
+  <script src="js/indexPage/bigMostReadCard.js"></script>
+  <script src="js/indexPage/opinions.js"></script>
+  <script src="js/indexPage/latestNews.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+.card:hover {
+    transform: translateY(0%);
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.watch-page .watch-icons {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
+}
+
+.watch-icons i:hover {
+    cursor: pointer;
+}
+
+.watch-page #more {
+    display: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.card-inner {
+    display: none;
+}
+
+.public-comment .card .btn {
+    background-color: darkred;
+    border-color: darkred;
+    color: #fff;
+}
+
+.public-comment .card .btn:hover {
+    background-color: rgb(175, 4, 4);
+}
+
+time {
+    left: 24px !important;
+}
+
+.watch-page .fa-play {
+    right: 53% !important;
+}
+
+.col-sm-5 {
+    position: relative;
+}
+
+#mybtn:hover {
+    color: rgb(146, 60, 60) !important;
+    background-color: white !important;
+}
+
+@media(min-width:992px) {
+    time {
+        font-size: 13px;
+    }
+
+    .fa-play {
+        font-size: 20px !important;
+    }
+}
+
+@media(max-width: 1062px) {
+    #mybtn {
+        margin-bottom: 60px;
+    }
+}
+
+@media(max-width:570px) {
+    .reply-time {
+        font-size: 10px;
+    }
+}

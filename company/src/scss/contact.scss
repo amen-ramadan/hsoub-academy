@@ -1,0 +1,15 @@
+.banner-contact {
+    #banner-img {
+        background-image: url(../Images-kobash/20230425_075844.jpg);
+        background-size:  100% 135%;
+    }
+}
+
+.contact-us {
+    #contact-info {
+        svg {
+            color: $main-color;
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,219 @@
+header {
+  .navbar {
+    padding: 10px;
+    border-bottom: 1px solid $gray-color;
+    background-color: #fff;
+    transition: all .3s;
+
+    &-brand {
+      color: $main-color;
+      font-size: 30px;
+    }
+
+    .nav-link {
+      color: $black-color;
+      font-size: 20px;
+      margin-right: 20px;
+      transition: all .3s;
+
+      &:hover {
+        color: $main-color;
+        text-decoration: underline;
+      }
+    }
+
+    .login {
+      position: relative;
+
+      @media #{$md} {
+        display: none;
+      }
+
+      &:hover {
+        .login-container {
+          visibility: visible;
+
+          .button {
+            visibility: visible;
+          }
+        }
+      }
+
+      i {
+        font-size: 30px;
+        margin-left: 15px;
+        color: $gray-color;
+        cursor: pointer;
+      }
+
+      &-container {
+        position: absolute;
+        width: 250px;
+        height: 80px;
+        background-color: #fff;
+        border: 1px solid $gray-color;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        top: 50px;
+        right: -115px;
+        visibility: hidden;
+        transition: all .3s;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+          transform: rotate(45deg) translateX(50%);
+          top: -18px;
+          right: 50%;
+          border-top: 1px solid $gray-color;
+          border-left: 1px solid $gray-color;
+        }
+
+        .button {
+          @include button($main-color, $white-color, $main-color);
+          visibility: hidden;
+        }
+      }
+    }
+
+    .login-button {
+
+      .button {
+        @include button($main-color, $white-color, $main-color);
+        font-size: 16px;
+        width: 50%;
+        margin: 15px auto;
+        text-align: center;
+        display: none;
+
+        @media #{$md} {
+          display: block;
+        }
+      }
+
+    }
+
+    form {
+      .search-icon {
+        padding: 2px;
+
+        i {
+          font-size: 30px;
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  .header-news {
+    margin-top: 50px;
+
+    .carousel {
+      &-news {
+        margin-top: 50px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: -10px;
+          top: 150px;
+          height: 200px;
+          width: 20px;
+          background-color: $main-color;
+
+          @media #{$large} {
+            top: 70px;
+          }
+
+          @media #{$sm} {
+            display: none;
+          }
+        }
+      }
+
+      &-text {
+        padding: 20px 10px 70px;
+        color: $white-color;
+        background-color: rgba($color: $black-color, $alpha: 0.5);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 750px;
+
+        h3 {
+          font-size: 18px;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 85px;
+            width: 5px;
+            background-color: $main-color;
+            left: 310px;
+            top: -10px;
+
+            @media #{$large} {
+              left: 330px;
+            }
+
+            @media #{$md} {
+              display: none;
+            }
+
+          }
+        }
+      }
+
+      &-indicators {
+        left: -580px;
+
+        @media #{$X-large} {
+          left: -510px;
+        }
+
+        @media #{$large} {
+          left: -430px;
+        }
+
+        @media #{$md} {
+          left: 0;
+        }
+
+        button {
+          height: 25px;
+          width: 16px;
+          text-indent: 0;
+          border: 1px;
+          border-radius: 2px;
+        }
+      }
+
+      &-item {
+        img {
+          max-height: 490px;
+        }
+
+        &:hover {
+          .carousel-text {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .header-articles {
+    margin-top: 50px;
+
+    .row {
+      margin-top: 40px;
+    }
+  }
+
+}

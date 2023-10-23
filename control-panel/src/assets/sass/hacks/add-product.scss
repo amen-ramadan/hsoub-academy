@@ -1,0 +1,22 @@
+.c-upload+.c-form__controls {
+  max-width: 500px;
+  margin-right: spacing("wide");
+
+  .c-textfield__textarea {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: $bp-desktop-small) {
+
+  .c-form {
+    flex-wrap: wrap;
+  }
+
+  .c-upload+.c-form__controls {
+
+    margin-right: 0;
+
+  }
+
+}

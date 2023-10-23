@@ -1,0 +1,35 @@
+#search-filters-icon {
+    cursor: pointer;
+} 
+
+.filter-colum {
+    display: none;
+}
+input:checked+span {
+    color: darkred;
+}
+time {
+    bottom: 7px;
+    left: 29px;
+}
+@media (max-width: 766px ) {
+    .card .card-top-image {
+        width: 100%;
+    }
+        .card .card-horizontal time {
+            left: 10px;
+        }
+        .card .card-horizontal .fa-play {
+            right: 48%;
+        }
+
+}
+@media (min-width: 767px) and (max-width: 992px) {
+    .card .card-horizontal .card-body .channel-img {
+        display: block;
+        margin-top: 10px;
+    }
+    .card .card-horizontal .card-body .channel-img>img {
+        margin-right: 0px !important;
+    }
+}

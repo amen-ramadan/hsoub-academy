@@ -1,0 +1,234 @@
+const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+
+module.exports = {
+
+  entry: {
+    'app': './src/index.js',
+    'assets/js/banner': './src/assets/js/banner.js',
+    'assets/js/tabs': './src/assets/js/tabs.js',
+    'assets/js/upload': './src/assets/js/upload.js',
+    'assets/js/chart': './src/assets/js/chart.js',
+  },
+
+  output: {
+
+    publicPath: '/',
+    path: path.join(__dirname, 'app'),
+    filename: '[name].js'
+
+  },
+
+  devServer: {
+
+    contentBase: path.join(__dirname, "/app"),
+    port: 8080,
+    writeToDisk: true,
+    open: true,
+
+  },
+
+
+
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.(sass|css|scss)$/,
+
+        use: [
+
+          MiniCssExtractPlugin.loader,
+
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+
+        ],
+
+      },
+      {
+
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+
+        exclude: /images/, //استبعاد الصور المحتمل ان تكون بصيغة svg لكي لا يتم تحزيمها الى ملف الخطوط
+
+        use: [
+
+          {
+
+            loader: "file-loader",
+
+            options: {
+
+              name: '[name].[ext]',
+
+              outputPath: "assets/fonts",
+
+            }
+
+          }
+
+        ]
+
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        exclude: /fonts/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "assets/images",
+            },
+          },
+        ],
+      },
+
+    ]
+  },
+  plugins: [
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new OptimizeCSSAssetsPlugin({}),
+    new MiniCssExtractPlugin({
+      filename: "assets/css/style.css"
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.html',
+      chunks: ['app', 'assets/js/banner', 'assets/js/chart', 'assets/js/tabs']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'add-product.html',
+      template: './src/add-product.html',
+      chunks: ['app', 'assets/js/upload']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'products.html',
+      template: './src/products.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'users.html',
+      template: './src/users.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'orders.html',
+      template: './src/orders.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'add-user.html',
+      template: './src/add-user.html',
+      chunks: ['app', 'assets/js/upload']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/button.html',
+      template: './src/components/button.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/textfield.html',
+      template: './src/components/textfield.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/card.html',
+      template: './src/components/card.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/list.html',
+      template: './src/components/list.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/tabs.html',
+      template: './src/components/tabs.html',
+      chunks: ['app', 'assets/js/tabs']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/banner.html',
+      template: './src/components/banner.html',
+      chunks: ['app', 'assets/js/banner']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/upload.html',
+      template: './src/components/upload.html',
+      chunks: ['app', 'assets/js/upload']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/help.html',
+      template: './src/components/help.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/summary.html',
+      template: './src/components/summary.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/action.html',
+      template: './src/components/action.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/sidebar.html',
+      template: './src/components/sidebar.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/table.html',
+      template: './src/components/table.html',
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'components/chart.html',
+      template: './src/components/chart.html',
+      chunks: ['app', 'assets/js/chart']
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/components/help.html"),
+      location: 'help', // هذا اسم الايليمينت الذي سوف تكتبه بدل الشيفرات الموجودة في ملف هيلب ويمكنك كتابته من عندك يعني اي اختراع مو مشكلة
+      template_filename: ['index.html', 'add-product.html', 'products.html', 'users.html', 'orders.html', 'add-user.html'], // قل له اين سيضع الملفات بالضبط وهي مصفوفة تاخذ اكثر من ملف
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/components/banner.html"),
+      location: 'banner',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/components/chart.html"),
+      location: 'chart',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/components/sidebar.html"),
+      location: 'sidebar',
+      template_filename: ['index.html', 'add-product.html', 'products.html', 'users.html', 'orders.html', 'add-user.html'],
+    }),
+  ],
+}

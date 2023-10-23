@@ -1,0 +1,129 @@
+@import './_variable.scss';
+
+
+.banner {
+    #banner-img {
+        background-image: url(../Images-kobash/IMG-20230405-WA0060.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 10%;
+        height: 300px;
+        background-size: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        background-color: rgba(65, 155, 155, 0.5);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title1 {
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+.our-works {
+
+    .container {
+        max-width: 1200px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .custom-btn-2 {
+        color: #363636;
+        background-color: #fff;
+        border: none;
+        border-radius: 1px;
+        font-weight: bold;
+        position: absolute;
+        left: 25px;
+        top: 20px;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $main-color;
+        }
+    }
+
+    .card {
+        height: 400px;
+    }
+
+    img {
+        width: 100%;
+        height: 53%;
+    }
+}
+
+.btn,
+button {
+
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* لازالة الحوامش الدخلية من ال modal*/
+.modal-body {
+    padding: 0;
+}
+
+#image-gallery {
+    .modal-footer {
+        display: block;
+    }
+
+    img#image-gallery-image {
+        max-width: 100% !important;
+        height: 400px !important;
+        object-fit: contain !important;
+        /* لازالة الحوامش الدخلية من الصورة*/
+        padding-right:0 !important;
+        padding-left:0 !important;
+
+    }
+}
+
+.thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 12rem;
+    width: 16rem;
+
+    img {
+        height: 110%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
+.project-details {
+    .card {
+        .card-body {
+            .card-title {
+                font-weight: 800;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .project-details {
+        .thumb {
+            margin-left: 15px;
+            margin-right: 15px;
+            max-width: 94%;
+        }
+    }
+}

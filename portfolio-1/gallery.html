@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="موقع شخصي لامين">
+    <meta name="author" content="امين">
+    <title>الموقع الشخصي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+</head>
+
+<body>
+    <main>
+        <section id="header">
+            <div id="branding" style="flex-grow: 8">
+                <h1><a href="amen.html"><i class="fa fa-user-circle"></i>صفحة <span class="highlight">امين</span></a>
+                </h1>
+            </div> <!-- هذا في ما يخص شعار الموقع -->
+
+            <nav>
+                <ul>
+                    <li><a href="amen.html">الرئيسية</a></li>
+                    <li class="current"><a href="gallery.html">معرض الاعمال</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="slider">
+            <div id="wrapper">
+                <div class="content">
+                    <img src="img/1.png">
+                </div>
+                <div class="content">
+                    <img src="img/2.png">
+                </div>
+                <div class="content">
+                    <img src="img/3.png">
+                </div>
+                <div class="content">
+                    <img src="img/4.png">
+                </div>
+            </div>
+            <div id="navlinks">
+                <ul>
+                    <li class="itemlinks" data-pos="0"></li>
+                    <li class="itemlinks" data-pos="1"></li>
+                    <li class="itemlinks" data-pos="2"></li>
+                    <li class="itemlinks" data-pos="3"></li>
+                </ul>
+            </div>
+        </section>
+        <section id="footer">
+            <p>الصفحة الشخصية لامين &copy; <span id="currentyear"></span></p>
+
+        </section>
+
+    </main>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/slider.js"></script>
+<script src="js/scripts.js"></script>
+
+</html>
