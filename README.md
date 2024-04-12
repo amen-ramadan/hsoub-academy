@@ -10,9 +10,9 @@ The projects are organized from simple to advanced:
 2. **youtuby**
 3. **five-landing-page**
 4. **my-news**
-5. **ecommerce**
-6. **company**
-7. **control-panel**
+5. [**ecommerce**](https://amen-ecommerce.netlify.app/)
+6. [**company**](https://kobash.netlify.app/)
+7. [**control-panel**](https://amen-control-panel.netlify.app/)
 
 Each project incorporates various frontend development libraries, scenarios, and concepts. They were created with approximately 72 hours of explanation and 9 months of continuous practical application.
 
